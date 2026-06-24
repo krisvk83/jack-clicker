@@ -25,3 +25,19 @@ async function connectWallet() {
 document
 .getElementById("connectBtn")
 .addEventListener("click", connectWallet);
+function moveCoin() {
+
+    const gameArea =
+        document.getElementById("gameArea");
+
+    const x =
+        Math.random() *
+        (gameArea.clientWidth - 50);
+
+    const y =
+        Math.random() *
+        (gameArea.clientHeight - 50);
+
+    coin.style.left = x + "px";
+    coin.style.top = y + "px";
+}
