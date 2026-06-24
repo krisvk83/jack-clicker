@@ -41,3 +41,14 @@ function moveCoin() {
     coin.style.left = x + "px";
     coin.style.top = y + "px";
 }
+coin.addEventListener("click", () => {
+
+    if (!gameRunning) return;
+
+    score++;
+
+    document.getElementById("score").innerText =
+        score;
+
+    moveCoin();
+});
