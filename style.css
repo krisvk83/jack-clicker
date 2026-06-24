@@ -1,0 +1,19 @@
+body{
+    text-align:center;
+    font-family:Arial;
+}
+
+#gameArea{
+    width:800px;
+    height:500px;
+    border:2px solid black;
+    margin:auto;
+    position:relative;
+}
+
+#coin{
+    position:absolute;
+    font-size:40px;
+    cursor:pointer;
+    display:none;
+}
