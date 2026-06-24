@@ -52,3 +52,42 @@ coin.addEventListener("click", () => {
 
     moveCoin();
 });
+function startGame() {
+
+    score = 0;
+    timeLeft = 60;
+    gameRunning = true;
+
+    document.getElementById("score").innerText = 0;
+    document.getElementById("time").innerText = 60;
+
+    coin.style.display = "block";
+
+    moveCoin();
+
+    const timer = setInterval(() => {
+
+        timeLeft--;
+
+        document.getElementById("time").innerText =
+            timeLeft;
+
+        if (timeLeft <= 0) {
+
+            clearInterval(timer);
+
+            gameRunning = false;
+
+            coin.style.display = "none";
+
+            alert(
+                "Game Over! Score: " + score
+            );
+        }
+
+    },1000);
+}
+
+document
+.getElementById("startBtn")
+.addEventListener("click", startGame);
